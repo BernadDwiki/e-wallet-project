@@ -129,7 +129,6 @@ html, body {
   text-decoration: none;
   border-radius: 10px;
   margin: 0 10px;
-  transition: background .15s, color .15s;
   cursor: pointer;
 }
 
@@ -269,7 +268,6 @@ html, body {
   background: var(--blue);
   color: var(--white);
   text-decoration: none;
-  transition: opacity .2s;
 }
 
 .fs-btn:hover {
@@ -326,7 +324,6 @@ html, body {
   font-weight: 600;
   color: var(--text);
   cursor: pointer;
-  transition: background .15s, border-color .15s;
   white-space: nowrap;
 }
 
@@ -400,7 +397,6 @@ html, body {
   gap: 11px;
   padding: 13px 18px;
   border-bottom: 1px solid var(--gray-200);
-  transition: background .15s;
 }
 
 .transaction-item:last-child {
