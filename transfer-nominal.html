@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet — Transfer Set Nominal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="transfer-nominal.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- ════════════════════════════════════════
+       TOP BAR
+  ════════════════════════════════════════ -->
+      <header class="topbar">
+        <a href="#" class="topbar-brand">
+          <img src="assets/dompet1.png" alt="E-Wallet Logo" class="topbar-brand-logo" />
+          E-Wallet
+        </a>
+        <div class="topbar-right">
+          <span class="topbar-username">Ghaluh Wizard</span>
+          <img src="assets/ghaluh.png" alt="User Avatar" class="topbar-avatar" />
+          <img src="assets/Vector(2).png" alt="Expand" class="topbar-chevron" />
+        </div>
+      </header>
+
+      <!-- ════════════════════════════════════════
+       SIDEBAR
+  ════════════════════════════════════════ -->
+      <aside class="sidebar">
+        <a href="#" class="nav-item">
+          <img src="assets/dashboard-two(2).png" alt="" class="nav-icon" />
+          Dashboard
+        </a>
+
+        <a href="#" class="nav-item active">
+          <img src="assets/Send.png" alt="" class="nav-icon" />
+          Transfer
+        </a>
+
+        <a href="#" class="nav-item">
+          <img src="assets/history.png" alt="" class="nav-icon" />
+          History
+        </a>
+
+        <a href="#" class="nav-item">
+          <img src="assets/Upload.png" alt="" class="nav-icon" />
+          Top Up
+        </a>
+
+        <a href="#" class="nav-item">
+          <img src="assets/2 User.png" alt="" class="nav-icon" />
+          Profile
+        </a>
+        <a href="#" class="nav-item danger">
+          <img src="assets/Log Out.png" alt="" class="nav-icon" />
+          Keluar
+        </a>
+      </aside>
+
+      <!-- ════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════ -->
+      <main class="main">
+        <!-- ── PAGE HEADER ── -->
+        <div class="page-header">
+          <img src="assets/Send-2.png" alt="Transfer Icon" class="page-header-icon" />
+          <h1 class="page-title">Transfer Money</h1>
+        </div>
+
+        <!-- ── STEP INDICATOR ── -->
+        <div class="steps">
+          <div class="step inactive">
+            <div class="step-number">1</div>
+            <span class="step-label">Find People</span>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step active">
+            <div class="step-number">2</div>
+            <span class="step-label">Set Nominal</span>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step inactive">
+            <div class="step-number">3</div>
+            <span class="step-label">Finish</span>
+          </div>
+        </div>
+
+        <!-- ── CONTENT CARD ── -->
+        <div class="content-card">
+          <!-- People Information -->
+          <div>
+            <div class="section-title">People Information</div>
+
+            <div class="person-info-row">
+              <img src="assets/prof3/Rectangle 648.png" alt="Ghaluh 1" class="person-info-avatar" />
+              <div class="person-info-details">
+                <span class="person-info-name">Ghaluh 1</span>
+                <span class="person-info-phone">(239) 555–0108</span>
+                <img src="assets/Sidenav item.png" alt="Verified" class="verified-badge-img" />
+              </div>
+              <button class="person-star-btn">
+                <img src="assets/Star.png" alt="Favourite" class="star-icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Amount -->
+          <div>
+            <div class="section-title">Amount</div>
+            <p class="section-desc">
+              Type the amount you want to transfer and then press continue to
+              the next steps.
+            </p>
+
+            <div class="amount-input-wrap">
+              <img src="assets/u_money-bill.png" alt="Amount Icon" class="amount-input-icon" />
+              <input
+                type="text"
+                class="amount-input"
+                placeholder="Enter Nominal Transfer"
+              />
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div>
+            <div class="section-title">Notes</div>
+            <p class="section-desc">
+              You can add some notes for this transfer such as payment coffee or
+              something.
+            </p>
+
+            <textarea
+              class="notes-textarea"
+              placeholder="Enter Some Notes"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button class="submit-btn">Submit &amp; Transfer</button>
+        </div>
+        <!-- end content-card -->
+      </main>
+    </div>
+    <!-- end app-shell -->
+  </body>
+</html>

@@ -1,0 +1,449 @@
+/* ============================================================
+   E-WALLET DASHBOARD — dashboard.css
+   ============================================================ */
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:      #2D39F5;
+  --blue-soft: #EEF0FF;
+  --blue-text: #3B4AFA;
+  --green:     #16A34A;
+  --red:       #DC2626;
+  --gray-100:  #F5F6FA;
+  --gray-200:  #E5E7EB;
+  --gray-400:  #9CA3AF;
+  --gray-600:  #6B7280;
+  --gray-800:  #1F2937;
+  --text:      #111827;
+  --white:     #ffffff;
+  --sidebar-w: 196px;
+  --topbar-h:  64px;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+/* ============================================================
+   APP SHELL
+   ============================================================ */
+.app-shell {
+  display: grid;
+  grid-template-rows: var(--topbar-h) 1fr;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-areas:
+    "topbar  topbar"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  grid-area: topbar;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--blue-text);
+}
+
+.topbar-brand-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.topbar-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.topbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gray-200);
+}
+
+.topbar-chevron {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: .45;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  grid-area: sidebar;
+  background: var(--white);
+  border-right: 1px solid var(--gray-200);
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: sticky;
+  top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: background .15s, color .15s;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+.nav-item.active {
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.nav-item.active .nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav-item.danger {
+  color: var(--red);
+}
+
+.nav-item.danger:hover {
+  background: #FEF2F2;
+}
+
+/* ── MAIN ── */
+.main {
+  grid-area: main;
+  padding: 24px 24px 24px 20px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-rows: auto auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ============================================================
+   STAT CARDS ROW  (col 1, row 1)
+   ============================================================ */
+.stat-cards {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  padding: 18px 20px;
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.stat-card-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.stat-card-label {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.stat-card-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.stat-card-badge {
+  display: inline-flex;
+  align-items: center;
+}
+
+.stat-card-badge-icon {
+  width: auto;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ============================================================
+   FAST SERVICE  (col 1, row 2)
+   ============================================================ */
+.fast-service-card {
+  grid-column: 1;
+  grid-row: 2;
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fast-service-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.fast-service-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.fs-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.fs-btn:hover {
+  opacity: .88;
+}
+
+.fs-btn-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================================
+   INCOME CHART  (col 1, row 3)
+   ============================================================ */
+.chart-card {
+  grid-column: 1;
+  grid-row: 3;
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  padding: 18px 20px;
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.chart-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chart-filters {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Chart Filter Button (pengganti <select>) ── */
+.chart-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background: var(--gray-100);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+  white-space: nowrap;
+}
+
+.chart-filter-btn:hover {
+  background: var(--gray-200);
+  border-color: var(--gray-400);
+}
+
+.chart-filter-chevron {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.chart-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   TRANSACTION HISTORY  (col 2, rows 1-3)
+   ============================================================ */
+.transaction-card {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid var(--gray-200);
+  flex-shrink: 0;
+}
+
+.transaction-card-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transaction-see-all {
+  font-size: 12px;
+  color: var(--blue-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.transaction-see-all:hover {
+  text-decoration: underline;
+}
+
+.transaction-list {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--gray-200);
+  transition: background .15s;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item:hover {
+  background: var(--gray-100);
+}
+
+.transaction-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transaction-type {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+.transaction-amount {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.transaction-amount.positive { color: var(--green); }
+.transaction-amount.negative { color: var(--red); }

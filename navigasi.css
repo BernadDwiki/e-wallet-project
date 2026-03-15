@@ -1,0 +1,63 @@
+/* ============================================================
+   E-WALLET NAVIGATION — nav.css
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:     #2D39F5;
+  --blue-soft:#EEF0FF;
+  --gray-200: #E5E7EB;
+  --gray-400: #9CA3AF;
+  --gray-100: #F5F6FA;
+  --text:     #111827;
+  --white:    #ffffff;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+.container {
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-list li a {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue);
+  color: var(--blue);
+}

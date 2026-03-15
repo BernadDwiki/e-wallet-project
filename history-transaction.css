@@ -1,0 +1,389 @@
+/* ============================================================
+   E-WALLET HISTORY PAGE — history.css
+   ============================================================ */
+
+/* ── RESET & BASE ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:        #2D39F5;
+  --blue-dark:   #1a25d4;
+  --blue-soft:   #EEF0FF;
+  --blue-text:   #3B4AFA;
+  --green:       #16A34A;
+  --red:         #DC2626;
+  --gray-100:    #F5F6FA;
+  --gray-200:    #EAECF0;
+  --gray-400:    #9CA3AF;
+  --gray-600:    #6B7280;
+  --gray-800:    #1F2937;
+  --text:        #111827;
+  --white:       #ffffff;
+  --sidebar-w:   200px;
+  --topbar-h:    60px;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--gray-100);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   LAYOUT SHELL
+   ============================================================ */
+.app-shell {
+  display: grid;
+  grid-template-rows: var(--topbar-h) 1fr;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-areas:
+    "topbar topbar"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  grid-area: topbar;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--blue-text);
+}
+
+.topbar-brand-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.topbar-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.topbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gray-200);
+}
+
+.topbar-chevron {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: .45;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  grid-area: sidebar;
+  background: var(--white);
+  border-right: 1px solid var(--gray-200);
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: sticky;
+  top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+.nav-item.active {
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.nav-item.active .nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav-item.danger {
+  color: var(--red);
+}
+
+.nav-item.danger:hover {
+  background: #FEF2F2;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.main {
+  grid-area: main;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── PAGE TITLE ── */
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.page-title-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   HISTORY CARD
+   ============================================================ */
+.history-card {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+/* ── SEARCH BAR ── */
+.history-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.history-search-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 8px 14px;
+  background: var(--white);
+  width: 260px;
+}
+
+.search-input-wrap:focus-within {
+  border-color: var(--blue);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: var(--gray-400);
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: .5;
+  flex-shrink: 0;
+}
+
+/* ── TRANSACTION TABLE ── */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 1fr 1fr 48px;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--gray-200);
+  gap: 12px;
+}
+
+.history-table-row:last-child {
+  border-bottom: none;
+}
+
+.history-table-row:hover {
+  background: var(--gray-100);
+}
+
+.history-table-row:nth-child(even){
+  background: var(--gray-100);
+}
+
+.history-row-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.history-row-name {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.history-row-phone {
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.history-row-amount {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.history-row-amount.positive { color: var(--green); }
+.history-row-amount.negative { color: var(--red); }
+
+.history-row-delete {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #FEF2F2;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.history-row-delete:hover {
+  background: #FECACA;
+}
+
+.history-row-delete-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* ── PAGINATION ── */
+.history-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.pagination-info {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination-btn {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.pagination-btn:hover {
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+.pagination-btn.active {
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.pagination-btn.nav-text {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.pagination-btn.nav-text:hover {
+  color: var(--blue);
+  background: transparent;
+}
