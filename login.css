@@ -12,6 +12,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  background: linear-gradient(135deg, #4a6cf7, #2d46c0);
 }
 
 /* LEFT */
@@ -22,6 +23,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .logo {
@@ -154,7 +157,6 @@ form input[type="email"] {
 /* RIGHT */
 .right {
   width: 50%;
-  background: linear-gradient(135deg, #4a6cf7, #2d46c0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,4 +164,108 @@ form input[type="email"] {
 
 .right img {
   width: 600px;
+}
+
+/* =============================================
+   RESPONSIVE - TABLET (max-width: 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+    .left {
+        padding: 32px 28px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .right {
+        padding: 28px 20px;
+    }
+
+    .right img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+/* =============================================
+   RESPONSIVE - MOBILE (max-width: 768px)
+   ============================================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .right {
+        width: 100%;
+        padding: 40px 24px 24px;
+        order: 1;
+    }
+
+    .right img {
+        width: 200px;
+    }
+
+    .left {
+        width: 100%;
+        padding: 32px 24px;
+        border-radius: 0;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 0;
+        order: 2;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+
+    .or {
+        gap: 16px;
+    }
+}
+
+
+/* =============================================
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+   ============================================= */
+@media (max-width: 480px) {
+    .left {
+        padding: 24px 16px;
+    }
+
+    .right {
+        padding: 28px 16px 16px;
+    }
+
+    .right img {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    .google,
+    .facebook {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .register {
+        font-size: 13px;
+        padding: 10px;
+    }
 }
