@@ -166,30 +166,6 @@ form input[type="email"] {
     width: 700px;
 }
 
-
-/* =============================================
-   RESPONSIVE - TABLET (max-width: 1024px)
-   ============================================= */
-@media (max-width: 1024px) {
-    .left {
-        padding: 32px 28px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .right {
-        padding: 28px 20px;
-    }
-
-    .right img {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
-
 /* =============================================
    RESPONSIVE - MOBILE (max-width: 768px)
    ============================================= */
