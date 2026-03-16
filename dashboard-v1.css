@@ -174,9 +174,11 @@ html, body {
 }
 
 /* ============================================================
-   STAT CARDS ROW  
+   STAT CARDS ROW  (col 1, row 1)
    ============================================================ */
 .stat-cards {
+  grid-column: 1;
+  grid-row: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
