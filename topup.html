@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet — Top Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="topup.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <a href="nav.html" class="topbar-brand">
+          <img src="assets/dompet1.png" alt="E-Wallet Logo" class="topbar-brand-logo" />
+          E-Wallet
+        </a>
+        <div class="topbar-right">
+          <span class="topbar-username">Ghaluh Wizard</span>
+          <img src="assets/ghaluh.png" alt="User Avatar" class="topbar-avatar" />
+          <img src="assets/Vector(2).png" alt="Expand" class="topbar-chevron" />
+        </div>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <a href="dashboard.html" class="nav-item">
+          <img src="assets/dashboard-two(2).png" alt="" class="nav-icon" />
+          Dashboard
+        </a>
+        <a href="transfer-nominal.html" class="nav-item">
+          <img src="assets/Send.png" alt="" class="nav-icon" />
+          Transfer
+        </a>
+        <a href="history-transaction.html" class="nav-item">
+          <img src="assets/history.png" alt="" class="nav-icon" />
+          History
+        </a>
+        <a href="topup.html" class="nav-item active">
+          <img src="assets/Upload.png" alt="" class="nav-icon" />
+          Top Up
+        </a>
+        <a href="edit-profile.html" class="nav-item">
+          <img src="assets/2 User.png" alt="" class="nav-icon" />
+          Profile
+        </a>
+        <a href="#" class="nav-item danger">
+          <img src="assets/Log Out.png" alt="" class="nav-icon" />
+          Keluar
+        </a>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <img src="assets/Upload.png" alt="" class="page-header-icon" />
+          <h1 class="page-title">Top Up Account</h1>
+        </div>
+
+        <div class="content-layout">
+
+          <!-- LEFT COLUMN -->
+          <div class="left-col">
+
+            <!-- Account Information -->
+            <div class="card">
+              <div class="section-title">Account Information</div>
+              <div class="account-info-row">
+                <img src="assets/ghaluh.png" alt="Ghaluh Wizard" class="account-avatar" />
+                <div class="account-details">
+                  <span class="account-name">Ghaluh Wizard</span>
+                  <span class="account-phone">(239) 555–0108</span>
+                  <img src="assets/Sidenav item.png" alt="Verified" class="verified-badge-img" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Amount -->
+            <div class="card">
+              <div class="section-title">Amount</div>
+              <p class="section-desc">Type the amount you want to transfer to your e-wallet account.</p>
+              <div class="amount-input-wrap">
+                <img src="assets/u_money-bill.png" alt="" class="amount-input-icon" />
+                <input type="text" class="amount-input" placeholder="Enter Nominal Transfer" />
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="card">
+              <div class="section-title">Payment Method</div>
+              <p class="section-desc">Choose your payment method for top up account.</p>
+
+              <div class="payment-list">
+
+                <label class="payment-item">
+                  <input type="radio" name="payment" class="payment-radio" checked />
+                  <img src="assets/payment/bri.png" alt="BRI" class="payment-logo" />
+                  <span class="payment-name">Bank Rakyat Indonesia</span>
+                </label>
+
+                <label class="payment-item">
+                  <input type="radio" name="payment" class="payment-radio" />
+                  <img src="assets/payment/dana.png" alt="Dana" class="payment-logo" />
+                  <span class="payment-name">Dana</span>
+                </label>
+
+                <label class="payment-item">
+                  <input type="radio" name="payment" class="payment-radio" />
+                  <img src="assets/payment/bca.png" alt="BCA" class="payment-logo" />
+                  <span class="payment-name">Bank Central Asia</span>
+                </label>
+
+                <label class="payment-item">
+                  <input type="radio" name="payment" class="payment-radio" />
+                  <img src="assets/payment/gopay.png" alt="Gopay" class="payment-logo" />
+                  <span class="payment-name">Gopay</span>
+                </label>
+
+                <label class="payment-item">
+                  <input type="radio" name="payment" class="payment-radio" />
+                  <img src="assets/payment/ovo.png" alt="OVO" class="payment-logo" />
+                  <span class="payment-name">Ovo</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN — Payment Summary -->
+          <div class="right-col">
+            <div class="card summary-card">
+              <div class="section-title">Payment</div>
+
+              <div class="summary-rows">
+                <div class="summary-row">
+                  <span class="summary-label">Order</span>
+                  <span class="summary-value">Idr. 40.000</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Delivery</span>
+                  <span class="summary-value">Idr. 0</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Tax</span>
+                  <span class="summary-value">Idr. 4000</span>
+                </div>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-row summary-total">
+                <span class="summary-label">Sub Total</span>
+                <span class="summary-value total-value">Idr. 44.000</span>
+              </div>
+
+              <button class="submit-btn">Submit</button>
+
+              <p class="summary-note">*Get Discount if you pay with Bank Central Asia</p>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

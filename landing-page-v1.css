@@ -209,39 +209,23 @@
 
 .features-wrapper {
   position: relative;
-  line-height: 0; 
-}
-
-.wave-top {
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-bottom: -2px; 
-}
-
-.wave-bottom {
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-top: -2px; 
+  line-height: 0;
 }
 
 .features {
   display: flex;
   align-items: center;
-  gap: 200px;
-  padding: 0px 200px;
-  background-color: #2948FF;
-  position: relative;
-  line-height: 1.5; 
+  gap: 250px;
+  padding: 140px 200px;
+  background-image: url("assets/_8761_Vector__7813_Vector1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .feature-img {
-  flex: 0 0 200px;
   position: relative;
-  z-index: 1;
+  bottom: 50px;
 }
 
 .feature-img img {
@@ -250,20 +234,20 @@
 }
 
 .feature-text {
-  flex: 1;
+  top: 50px;
   color: white;
   position: relative;
-  z-index: 1;
+  gap: 10px;
 }
 
 .feature-text h2 {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: normal;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .feature-sub {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 32px;
   line-height: 1.6;
@@ -301,11 +285,11 @@
 .feature-item h4 {
   font-size: 15px;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .feature-item p {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
 }
@@ -419,7 +403,7 @@
    FOOTER
    ============================================================ */
 footer {
-  background: #2948FF;
+  background: #2948ff;
   padding: 50px 120px;
 }
 
@@ -447,7 +431,7 @@ footer {
 
 .footer-brand p {
   font-size: 13px;
-  color: rgba(255, 255, 255, .65);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.7;
 }
 
@@ -468,7 +452,7 @@ footer {
 }
 
 .footer-col ul li {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   display: flex;
   align-items: center;
@@ -478,7 +462,7 @@ footer {
 .footer-col ul li img {
   width: 15px;
   height: 15px;
-  opacity: .8;
+  opacity: 0.8;
   flex-shrink: 0;
 }
 
@@ -492,7 +476,7 @@ footer {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -501,7 +485,7 @@ footer {
 }
 
 .social-btn:hover {
-  background: rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .social-btn img {
@@ -528,7 +512,7 @@ footer {
 
 .newsletter-form button {
   background: #fff;
-  color: #2948FF;
+  color: #2948ff;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
@@ -542,6 +526,102 @@ footer {
   border-top: 1px solid white;
   padding-top: 20px;
   text-align: center;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 0px;
+    .hero-text {
+      width: fit-content;
+      padding: 2px 20px;
+      font-size: 100%;
+      order: 2;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+    .hero-image {
+      order: 1;
+      img {
+        width: 450px;
+        height: auto;
+      }
+    }
+  }
+
+  .partner {
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: fit-content;
+    }
+  }
+
+  .about {
+    padding: 20px;
+    flex-direction: column;
+    .about-text {
+      width: fit-content;
+      text-align: center;
+    }
+    .cards {
+      flex-direction: column;
+
+      .card {
+        width: fit-content;
+        height: auto;
+      }
+    }
+  }
+
+  .features {
+    background-size: cover;
+    padding: 50px 20px;
+    margin-top: 120px;
+    gap: 0px;
+    flex-direction: column;
+    .feature-img {
+      bottom: 120px;
+      margin-bottom: 0px;
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    .feature-text {
+      position: relative;
+      width: fit-content;
+      transform: translateY(-120px);
+    }
+
+    .feature-btn {
+      width: 100%;
+    }
+  }
+
+  .testimonial {
+    .testimonial-container {
+      .testi-card {
+        width: fit-content;
+      }
+    }
+  }
+
+  footer {
+    padding: 20px;
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
 }

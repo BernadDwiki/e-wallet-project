@@ -442,3 +442,109 @@ html, body {
   height: 18px;
   object-fit: contain;
 }
+
+/* ============================================================
+   TABLET  768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topbar"
+      "main";
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px 20px 88px;
+    gap: 14px;
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    z-index: 100;
+    align-items: stretch;
+  }
+
+  .bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--gray-400);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.15s;
+  }
+
+  .bottom-nav-item:hover {
+    color: var(--gray-600);
+  }
+
+  .bottom-nav-item.active {
+    color: var(--blue);
+  }
+
+  .bottom-nav-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .bottom-nav-item.active .bottom-nav-icon {
+    filter: invert(25%) sepia(98%) saturate(2000%) hue-rotate(224deg) brightness(95%);
+  }
+
+  .bottom-nav-item.danger {
+    color: var(--red);
+  }
+
+  .bottom-nav-item.danger .bottom-nav-icon {
+    filter: invert(22%) sepia(96%) saturate(2800%) hue-rotate(350deg) brightness(90%);
+  }
+}
+
+/* ============================================================
+   MOBILE  < 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .topbar-username {
+    display: none; 
+  }
+
+  .main {
+    padding: 14px 14px 80px;
+    gap: 12px;
+  }
+
+  .bottom-nav {
+    height: 60px;
+  }
+
+  .bottom-nav-item {
+    font-size: 9px;
+  }
+}

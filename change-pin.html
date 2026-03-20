@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet — Change Pin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="change-pin.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <a href="nav.html" class="topbar-brand">
+          <img src="assets/dompet1.png" alt="E-Wallet Logo" class="topbar-brand-logo" />
+          E-Wallet
+        </a>
+        <div class="topbar-right">
+          <span class="topbar-username">Ghaluh Wizard</span>
+          <img src="assets/ghaluh.png" alt="User Avatar" class="topbar-avatar" />
+          <img src="assets/Vector(2).png" alt="Expand" class="topbar-chevron" />
+        </div>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <a href="dashboard.html" class="nav-item">
+          <img src="assets/dashboard-two(2).png" alt="" class="nav-icon" />
+          Dashboard
+        </a>
+        <a href="transfer-nominal.html" class="nav-item">
+          <img src="assets/Send.png" alt="" class="nav-icon" />
+          Transfer
+        </a>
+        <a href="history.html" class="nav-item">
+          <img src="assets/history.png" alt="" class="nav-icon" />
+          History
+        </a>
+        <a href="topup.html" class="nav-item">
+          <img src="assets/Upload.png" alt="" class="nav-icon" />
+          Top Up
+        </a>
+        <a href="profile.html" class="nav-item active">
+          <img src="assets/2 User.png" alt="" class="nav-icon" />
+          Profile
+        </a>
+        <a href="#" class="nav-item danger">
+          <img src="assets/Log Out.png" alt="" class="nav-icon" />
+          Keluar
+        </a>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <img src="assets/2 User.png" alt="" class="page-header-icon" />
+          <h1 class="page-title">Profile</h1>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-title">
+            Change Pin
+            <span class="card-title-emoji">👋</span>
+          </div>
+          <p class="card-subtitle">Please save your pin because this so important.</p>
+
+          <div class="pin-input-wrap">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric" placeholder="0" />
+          </div>
+
+          <button class="submit-btn">Submit</button>
+        </div>
+
+      </main>
+    </div>
+  </body>
+</html>
